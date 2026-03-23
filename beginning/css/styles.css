@@ -148,11 +148,11 @@ nav li:hover > .sub-menu {
         width: 25px;
     }
 
-    .menuClose, nav {
+    .menuClose, nav, .navToggler:checked ~ .navTogglerMenu .menuOpen  {
         display: none;
     }
 
-    .navToggler:checked ~ nav {
+    .navToggler:checked ~ nav, .navToggler:checked ~ .navTogglerMenu .menuClose {
         display: block;
     }
 }
