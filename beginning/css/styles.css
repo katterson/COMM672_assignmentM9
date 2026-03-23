@@ -29,7 +29,8 @@ header {
 }
 header a {
     text-decoration: none;
-    color: #000
+    color: #000;
+    padding: 20px 0;
 }
 header a:hover {
     color: #e6a563;
@@ -60,4 +61,98 @@ header ul {
 }
 nav li {
     margin: 0 1em;
+    position: relative;
+}
+
+.sub-menu li{
+    margin: 0;
+}
+
+.sub-menu {
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    align-items: flex-start;
+    background-color: #fff;
+    border: 1px solid #efefef;
+    padding: 10px 20px 20px 20px;
+    border-radius: 10px;
+    width: 120px;
+    margin-top: 10px;
+    gap: 2em;
+    display: none;
+}
+
+nav li:hover > .sub-menu {
+    display: flex;
+}
+
+.navToggler, .navTogglerMenu {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    
+    header nav {
+        position: absolute;
+        width: 100%;
+        top: 120px;
+        left: 0;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        background-color: #efefef;
+        padding: 0;
+        gap: 0;
+        margin: 0;
+        border-top: solid 1px #fff;
+    }
+
+    header nav li {
+        text-align: center;
+        border-bottom: solid 1px #fff;
+        width: 100%;
+    }
+
+    nav li a {
+        display: block;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    nav .button {
+        width: 100%;
+        border-radius: 0;
+        display: block;
+        padding: 20px;
+    }
+
+    header nav li:last-child {
+        padding: 0;
+    }
+
+    .sub-menu {
+        display: flex;
+        position: relative;
+        border-radius: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .navTogglerMenu {
+        display: block;
+    }
+
+    .navTogglerMenu img {
+        width: 25px;
+    }
+
+    .menuClose, nav {
+        display: none;
+    }
+
+    .navToggler:checked ~ nav {
+        display: block;
+    }
 }
