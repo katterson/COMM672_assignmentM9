@@ -95,30 +95,39 @@ nav li:hover > .sub-menu {
     
     header nav {
         position: absolute;
-        width: 100%;
+        width: 100vw;
         top: 120px;
         left: 0;
     }
 
-    header nav ul {
+    header ul {
         flex-direction: column;
         background-color: #efefef;
         padding: 0;
         gap: 0;
         margin: 0;
+        width: 100%;
         border-top: solid 1px #fff;
     }
 
-    header nav li {
-        text-align: center;
+    header li {
+        margin: 0;
+        padding: 0;
         border-bottom: solid 1px #fff;
         width: 100%;
     }
 
-    nav li a {
+    header li a {
         display: block;
-        padding: 20px 0;
-        width: 100%;
+        padding: 20px;
+        margin: 0;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    header .container{
+        margin: 0;
+        padding: 0;
     }
 
     nav .button {
